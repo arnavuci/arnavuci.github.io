@@ -1,18 +1,19 @@
-@font-face {
+/* @font-face {
     font-family: Fledgling;
     src: url("./fonts/fledgling-sb.otf");
-}
+} */
 @keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
 body {
+    font-family: 'Rethink Sans', sans-serif;
     margin: 0;
     padding-bottom: 1rem;
-    background-image: url("https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwEfhaVCdcFQvxc1UkAC5Kxw");
+    background-image: url("https://pbs.twimg.com/media/FyagIFhakAAI_-8?format=jpg&name=4096x4096");
     background-size: cover;
     background-position: center;
-    font-family: Fledgling;
+    /* font-family: Fledgling; */
 }
 
 .fade-in {
@@ -20,8 +21,8 @@ body {
 }
 
 nav {
-    background-color: #333333;
-    color: #ffffff;
+    background-color: transparent; /* Set the background color of the navbar */
+    color: white; /* Set the default text color */
 }
 
 .navbar {
@@ -30,6 +31,7 @@ nav {
     padding: 0;
     overflow: hidden;
     text-align: center;
+    background: transparent; /* Set the background color of the navbar */
 }
 
 .navbar li {
@@ -39,20 +41,18 @@ nav {
 
 .navbar li a {
     display: block;
-    color: #ffffff;
-    font-size: 22px;
+    color: white; /* Set the default text color */
+    font-size: 20px;
     padding: 14px 16px;
     text-decoration: none;
+    transition: color 0.3s ease; /* Add a transition effect on the color property */
 }
 
 .navbar li a:hover {
-    background-color: #dddddd;
-    color: #333333;
+    background-color: transparent; /* Set the background color on hover */
+    color: black; /* Change the text color on hover */
 }
 
-.active {
-    background-color: #1c4397;
-}
 
 .portfolio {
     display: flex;
@@ -67,7 +67,7 @@ nav {
 }
 
 h1 {
-    font-size: 12rem;
+    font-size: 10rem;
 }
 
 p {
@@ -87,17 +87,16 @@ p {
     display: inline-block;
     margin: 0 10px;
     text-decoration: none;
-    background-color: #1c4397;
-    color: #ffffff;
+    background-color: transparent;
+    color: transparent;
     padding: 15px 15px;
-    border: 4px solid #1c4397;
+    border: 2px solid white;
     transition-duration: 0.5s;
     border-radius: 100px;
 }
 
 .button:hover {
-    background-color: #ffffff;
-    color: #1c4397;
+    border: 2px solid black;
 }
 
 .icons img {
@@ -112,17 +111,29 @@ p {
     height: 100vh;
 }
 
+/* Add the grid styles */
 .grid-container {
-    display: inline-grid;
-    grid-template-columns: auto auto auto;
-    padding: 20px;
-}
-
-.grid-item {
-    padding: 20px;
-    border: 20px transparent;
-    text-align: center;
-}
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Adjust the gap between grid items */
+  }
+  
+  .grid-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Optional: Add some styling to the grid items */
+  .grid-item {
+    padding: 10px; /* Add some padding to the grid items */
+    text-align: center; /* Center the content within grid items */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
 
 #profile-img {
     border: #ffffff solid;
